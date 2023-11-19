@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Assest/CSS/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/logo.png" />
+    <title>Foodo Foods | Login</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="label">User Login</h1>
+        <form class="login_form" action="#" method="post" name="form" onsubmit="return validateLogin()">
+            <div class="font">Username</div>
+            <input autocomplete="off" type="text" name="email_or_username" id="username">
+            <div id="username_error">Please fill in your Email or Username</div>
+            <div class="font font2">Password</div>
+            <input type="password" name="password" id="password">
+            <div id="pass_error">Please fill in your Password</div>
+            <button type="submit">Login</button>
+        </form>
+    </div>    
+    <script>
+        function validateLogin() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (username === "" || password === "") {
+                alert("Please fill in both username and password");
+                return false;
+            }
+
+            // Check your predefined username and password
+            if ((username === "admin" && password === "adminff") || (username === "user" && password === "userff")) {
+                alert("Login successful");
+
+                // Dynamically set the form action based on the user role
+                if (username === "admin") {
+                    document.form.action = "admin.html";
+                } else {
+                    document.form.action = "home.html";
+                }
+
+                return true;
+            } else {
+                alert("Incorrect username or password");
+                return false;
+            }
+        }
+    </script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

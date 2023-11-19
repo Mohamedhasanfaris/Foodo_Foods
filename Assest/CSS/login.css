@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: url('login.jpg') center center fixed;
+    background-size: cover;
+}
+
+.container {
+    width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8); /* Increased opacity for a cleaner look */
+    padding: 20px;
+    border-radius: 10px; /* Slightly increased border-radius */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Increased box-shadow for a subtle lift */
+    transition: transform 0.3s ease;
+}
+
+.label {
+    text-align: center;
+    color: #2c3e50; /* Darkened the text color */
+    font-size: 20px; /* Increased font size for emphasis */
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.login_form {
+    display: flex;
+    flex-direction: column;
+}
+
+.font {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+input {
+    width: calc(100% - 16px); /* Adjusted width to accommodate padding */
+    padding: 10px;
+    margin-top: 10px; /* Increased top margin for better spacing */
+    margin-bottom: 15px; /* Increased bottom margin for better spacing */
+    box-sizing: border-box;
+    border: 2px solid #3498db; /* Added border and adjusted color for input focus */
+    border-radius: 6px;
+    transition: border-color 0.3s ease; /* Smooth transition for border color on focus */
+}
+
+input:focus {
+    border-color: #2980b9; /* Change border color on focus */
+}
+
+#username_error,
+#pass_error {
+    color: #e74c3c; /* Changed error message color to red */
+    font-size: 14px;
+    margin-bottom: 10px;
+    display: none;
+}
+
+button {
+    background-color: #003c8a; /* Changed button color to green */
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #006eff; /* Darkened button color on hover */
+    color: black;
+}
+@media screen and (max-width: 600px) {
+    .container {
+        width: 90%; /* Adjusted width for smaller screens */
+        max-width: none;
+    }
+
+    input {
+        width: calc(100% - 20px); /* Adjusted width to accommodate padding for smaller screens */
+    }
+}

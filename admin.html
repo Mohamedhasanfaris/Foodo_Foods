@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Assest/CSS/admin.css"> <!-- Add your admin page styles here -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/logo.png" />
+    <title>Foodo Foods | Admin</title>
+</head>
+<body>
+    <!-- sidebar -->
+    <div class="sidebar">
+        <!-- logo -->
+        <h1 class="logo">FOODO FOODS ADMIN</h1>
+        <!-- list of menu -->
+        <div class="sidebar-menus">
+            <a href="#dashboard"><ion-icon name="home-outline"></ion-icon>Dashboard</a>
+            <a href="#manage-menu"><ion-icon name="file-tray-stacked-outline"></ion-icon>Manage Menu</a>
+            <a href="#manage-orders"><ion-icon name="clipboard-outline"></ion-icon>Manage Orders</a>
+            <!-- Add more admin functionalities as needed -->
+        </div>
+        <!-- logout -->
+        <div class="sidebar-logout">
+            <a href="#logout" id="logoutBtn"><ion-icon name="log-out-outline"></ion-icon>Logout</a>
+        </div>
+    </div>
+    <!-- main -->
+    <div class="main">
+        <!-- Admin Dashboard Section -->
+        <section id="dashboard">
+            <div class="container">
+                <h2>Admin Dashboard</h2>
+                <div class="dashboard-stats">
+                    <div class="stat-card">
+                        <h3>Total Orders</h3>
+                        <p class="stat-number">120</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Revenue</h3>
+                        <p class="stat-number">₹10,000</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Menu Items</h3>
+                        <p class="stat-number">50</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Manage Menu Section -->
+        <section id="manage-menu">
+            <div class="container">
+                <h2>Manage Menu</h2>
+                <!-- Add New Item Form -->
+                <div class="add-item-form">
+                    <h3>Add New Menu Item</h3>
+                    <form>
+                        <label for="itemName">Item Name:</label>
+                        <input type="text" id="itemName" name="itemName" required>
+                        <label for="itemPrice">Item Price (₹):</label>
+                        <input type="number" id="itemPrice" name="itemPrice" required>
+                        <button type="submit">Add Item</button>
+                    </form>
+                </div>
+                <div class="menu-list">
+                    <h3>Menu Items</h3>
+                    <ul>
+                        <li>Chicken Biriyani - ₹160</li>
+                        <li>Sandwich - ₹60</li>
+                        <!-- Add more existing items as needed -->
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- Manage Orders Section -->
+        <section id="manage-orders">
+            <div class="container">
+                <h2>Manage Orders</h2>
+                <!-- Order List -->
+                <div class="order-list">
+                    <div class="order">
+                        <h3>Order #75576</h3>
+                        <p>Customer: Hasan Faris</p>
+                        <p>Total Amount: ₹170</p>
+                        <ul>
+                            <li>Chicken Burger - ₹120</li>
+                            <li>Veg Momos - ₹50</li>
+                        </ul>
+                        <p>Order Status: completed</p>
+                        <button>Update Status</button>
+                    </div>
+                    <div class="order">
+                        <h3>Order #71842</h3>
+                        <p>Customer: Sakthinadhan</p>
+                        <p>Total Amount: ₹160</p>
+                        <ul>
+                            <li>Chicken noodles - ₹100</li>
+                            <li>sandwich - ₹60</li>
+                        </ul>
+                        <p>Order Status: processing</p>
+                        <button>Update Status</button>
+                    </div>
+                    <div class="order">
+                        <h3>Order #72344</h3>
+                        <p>Customer: Faizal</p>
+                        <p>Total Amount: ₹170</p>
+                        <ul>
+                            <li>Mushroom Biriyani - ₹160</li>
+                            <li>French Fries - ₹80</li>
+                        </ul>
+                        <p>Order Status: pending</p>
+                        <button>Update Status</button>
+                    </div>
+                    <!-- Add more orders as needed -->
+                </div>
+            </div>
+        </section>
+        <!-- Add more sections and functionalities as needed -->
+    </div>
+</body>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<!--admin page JavaScript-->
+<script src="Assest/JS/admin.js"></script>
+</html>

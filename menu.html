@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Assest/CSS/menu.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/logo.png" />
+    <title>Foodo Foods | Menu</title>
+</head>
+<body>
+     <!-- sidebar -->
+     <div class="sidebar">
+        <!-- logo -->
+        <h1 class="logo">FOODO FOODS</h1>
+
+        <!-- list of menu -->
+        <div class="sidebar-menus">
+            <a href="home.html #home"><ion-icon name="storefront-outline"></ion-icon>Home</a>
+            <a href=" menu.html #menu"><ion-icon name="menu-outline"></ion-icon>Menu</a>
+            <a href="cart.html #cart"><ion-icon name="cart-outline"></ion-icon>Cart</a>
+            <a href="contact.html #contact"><ion-icon name="chatbubbles-outline"></ion-icon>Contact Us</a>
+        </div>    
+        <!-- logout -->
+        <div class="sidebar-logout">
+            <a href="#logout" id="logoutBtn"><ion-icon name="log-out-outline"></ion-icon>Logout</a>
+        </div>
+    </div>
+           <!-- Menu Section -->
+           <section id="menu">
+            <!-- 1st category -->
+            <h2>BIRIYANI</h2>
+            <div class="menu-category">
+            <div class="menu-item" onclick="addToCart('Chicken Biriyani',160)">
+                    <img src="img/CB.jfif" alt="Chicken Biriyani" class="rounded-image">
+                    <p>Chicken Biriyani - ₹160</p>
+                    <p class="food-info"></p>
+                </div>
+                <div class="menu-item" onclick="addToCart('Mutton Biriyani',320)">
+                    <img src="img/MB.jfif" alt="Mutton Biriyani" class="rounded-image">
+                    <p>Mutton Biriyani - ₹320</p>
+                    <p class="food-info"></p>
+                </div>
+                <div class="menu-item" onclick="addToCart('Thalapakatti Biriyani',380)">
+                    <img src="img/Thala Bir.jfif" alt="Thalapakatti Biriyani" class="rounded-image">
+                    <p>Thalapakatti Biriyani - ₹380</p>
+                    <p class="food-info"></p>
+                </div>
+                <div class="menu-item" onclick="addToCart('Hyderabad Biriyani',250)">
+                    <img src="img/Hyderabadi cb.jfif" alt="Hyderabad Biriyani" class="rounded-image">
+                    <p>Hyderabad Biriyani - ₹250</p>
+                    <p class="food-info"></p>
+                </div>
+                <div class="menu-item" onclick="addToCart(' Malabar Biriyani', 200)">
+                    <img src="img/Mala B.jfif" alt="Malabar Biriyani" class="rounded-image">
+                    <p>Malabar Biriyani - ₹200</p>
+                    <p class="food-info"></p>
+                </div>
+                <div class="menu-item" onclick="addToCart('Ambur Chicken Biriyani', 210)">
+                    <img src="img/AMB.jfif" alt="Ambur Chicken Biriyani" class="rounded-image">
+                    <p>Ambur Chicken Biriyani - ₹210</p>
+                    <p class="food-info"></p>
+                </div>
+                <div class="menu-item" onclick="addToCart('Veg Biriyani',80)">
+                    <img src="img/Veg b.jfif" alt="Veg Biriyani" class="rounded-image">
+                    <p>Veg Biriyani - ₹80</p>
+                    <p class="food-info"></p>
+                </div>
+                <div class="menu-item" onclick="addToCart('MushroomBiriyani', 160)">
+                    <img src="img/Mush B.jfif" alt="Mushroom Biriyani" class="rounded-image">
+                    <p>Mushroom Biriyani - ₹160</p>
+                    <p class="food-info"></p>
+                </div>
+
+                <!-- Add more items as needed -->
+            </div>
+            <!-- 2nd category -->
+            <h2>Variety Rice</h2>
+            <div class="menu-category">
+                <div class="menu-item" onclick="addToCart('Curd Rice', 30)">
+                    <img src="img/curd-rice.jpg" alt="Curd Rice" class="rounded-image">
+                    <p>Curd Rice - ₹30</p>
+                    <p class="food-info"></p>
+                </div>
+                <div class="menu-item" onclick="addToCart('Lemon Rice', 45)">
+                    <img src="img/lemon-rice.jpg" alt="Lemon Rice" class="rounded-image">
+                    <p>Lemon Rice - ₹45</p>
+                    <p class="food-info"></p>
+                </div>
+                <div class="menu-item" onclick="addToCart('Mint Rice', 35)">
+                    <img src="img/pudina rice.jfif" alt="Mint Rice" class="rounded-image">
+                    <p>Mint Rice - ₹35</p>
+                    <p class="food-info"></p>
+                </div>
+                <div class="menu-item" onclick="addToCart('Pongal', 25)">
+                    <img src="img/pongal.jpg" alt="Pongal" class="rounded-image">
+                    <p>Pongal - ₹25</p>
+                    <p class="food-info"></p>
+                </div>
+                <!-- Add more items as needed -->
+            </div>
+            
+            <!-- 3rd Category -->
+            <h2>Fast Foods</h2>
+            <div class="menu-category">
+                <div class="menu-item" onclick="addToCart('Chicken Noodles', 100)">
+                    <img src="img/CN.jfif" alt="Chicken Noodles"class="rounded-image">
+                    <p>Chicken Noodles - ₹100</p>
+                    <p class="food-info"></p>
+                </div>
+                <div class="menu-item" onclick="addToCart('Chicken FriedRice', 100)">
+                    <img src="img/CFR.jfif" alt="Chicken FriedRice"class="rounded-image">
+                    <p>Chicken FriedRice - ₹100</p>
+                    <p class="food-info"></p>
+                </div>
+                <div class="menu-item" onclick="addToCart('Chicken Burger', 120)">
+                    <img src="img/CK bur.jfif" alt="Chicken Burger" class="rounded-image">
+                    <p>Chicken Burger - ₹120</p>
+                    <p class="food-info"></p>
+                </div>
+                <div class="menu-item" onclick="addToCart('Pizza', 130)">
+                    <img src="img/it pizza.jfif" alt="Pizza" class="rounded-image">
+                    <p>Pizza - ₹130</p>
+                    <p class="food-info"></p>
+                </div>
+                <div class="menu-item" onclick="addToCart('French Fries', 80)">
+                    <img src="img/French fries.jfif" alt="French Fries" class="rounded-image">
+                    <p>French Fries - ₹80</p>
+                    <p class="food-info"></p>
+                </div>
+                <div class="menu-item" onclick="addToCart('Sandwich', 60)">
+                    <img src="img/Sandwich.jfif" alt="Sandwich" class="rounded-image">
+                    <p>Sandwich - ₹60</p>
+                    <p class="food-info"></p>
+                </div>
+                <div class="menu-item" onclick="addToCart('Veg Momos', 50)">
+                    <img src="img/veg momo.jfif" alt="Veg Momos" class="rounded-image">
+                    <p>Veg Momos- ₹50</p>
+                    <p class="food-info"></p>
+                </div>
+                <!-- Add more  items as needed -->
+            </div>
+
+            <!-- Add more categories and items as needed -->
+        </section>
+    </section>
+<!-- JavaScript for logout-->
+    <script>
+        document.getElementById('logoutBtn').addEventListener('click', function() {
+            // Perform logout actions here
+            // For example, redirect to the login page
+            window.location.href = 'login.html';
+        });
+    </script>   
+</body>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<!-- JavaScript -->
+<script src="Assest/JS/menu.js"></script>
+<script src="Assest/JS/cart.js"></script>
+</html>

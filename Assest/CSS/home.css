@@ -1,0 +1,233 @@
+:root {
+    --primaryColor: #000000;
+    --secondaryColor: #fffb00;
+    --whiteColor: #fff;
+    --blackColor: #222;
+    --softGreenColor: #d9f2ee;
+    --darkGreyColor: #a7a7a7;
+    --greyColor: #f5f5f5;
+    --cyanColor: #00ffff;
+    --tealColor: #008080;	
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Open Sans', sans-serif;
+}
+body {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+.rounded-image {
+    width: 200px;
+    height: 150px;
+    border-radius: 10px; /* Adjust the radius as needed */
+    overflow: hidden; /* Ensure rounded corners are applied */
+}
+.sidebar {
+    height: 100%;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 2%;
+    background-color: var(--primaryColor);
+    color: var(--whiteColor);
+}
+.sidebar-menus{
+    display: flex;
+    flex-direction: column;
+}
+.sidebar-menus a , .sidebar-logout a {
+    padding: 5% 8%;
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    text-decoration: none;
+    color: var(--whiteColor);
+}
+.sidebar-menus a ion-icon , .sidebar-logout a ion-icon {
+    font-size: 20px;
+}
+.sidebar-menus a:hover , .sidebar-logout a:hover {
+    background-color: var(--secondaryColor);
+    color: var(--blackColor);
+    border-radius: 50px;
+}
+/* main */
+.main #home {
+    width: calc(100% - 250px); /* Adjusted width considering the sidebar width */
+    margin-left: 250px; /* Adjusted margin to match the sidebar width */
+    text-align: center;
+}
+#home {
+    height: 100vh;
+    text-align: center;
+    color: var(--blackColor);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('home.jpg'); /* Add the path to your background image */
+    background-size: cover; /* Adjust background size as needed */
+    background-position: center; /* Adjust background position as needed */
+}
+#home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2));
+    z-index: 0;
+}
+
+#home .content {
+    z-index: 1; /* Ensure the content is above the background image */
+    color: var(--blackColor);
+}
+
+#home h1,
+#home p,
+#home .btn {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+#home h1 {
+    animation: fadeInUp 1s ease-out forwards 0.5s;
+    font-size: 3em; /* Increase font size for emphasis */
+    margin-bottom: 20px;
+    color: #f5f5f5;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0); 
+}
+
+#home p {
+    animation: fadeInUp 1s ease-out forwards 1s;
+    font-size: 1.5em; /* Increase font size for better readability */
+    color: #f5f5f5;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0); 
+}
+
+#home .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+    animation: fadeInUp 1s ease-out forwards 1.5s;
+}
+
+#home .btn:hover {
+    background-color: var(--secondaryColor);
+    color: var(--blackColor);
+}
+
+
+/* Keyframes */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    max-width: 800px; /* Adjust the maximum width of the container */
+    margin-left: 250px; /* Center the container */
+    margin-right: 250px;
+}
+/* Style the heading */
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+/* Style the paragraphs */
+p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+/* Style the unordered list */
+ul {
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+/* Style list items in the unordered list */
+li {
+    margin-bottom: 10px;
+}
+/* Style the call-to-action */
+.cta {
+    text-align: center;
+}
+/* Style the "Explore Our Menu" link */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: var(--primaryColor); /* Consistent with sidebar secondary color */
+    color:var(--whiteColor); /* White text color */
+    border-radius: 5px;
+    border: 2px solid var(--darkGreyColor);
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+/* Hover effect for the button */
+.btn:hover {
+    background-color: var(--secondaryColor); /* Darker shade on hover */
+    color: var(--whiteColor);
+    border: 2px solid var(--darkGreyColor);
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    /* Mobile responsiveness styles */
+    .sidebar {
+        display: none;
+    }
+    .hamburger-menu {
+        display: block;
+    }
+    nav {
+        padding: 15px;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    nav a {
+        margin-right: 0;
+    }
+    .menu-item {
+        width: 100%;
+    }
+    section#cart {
+        padding: 20px 10px;
+    }
+    #home {
+        padding: 30px 10px;
+    }
+    #cart {
+        padding: 15px;
+    }
+    header h1 {
+        font-size: 24px;
+    }
+}

@@ -1,0 +1,232 @@
+:root {
+    --primaryColor: #000000;
+    --secondaryColor: #fffb00;
+    --whiteColor: #fff;
+    --blackColor: #222;
+    --softGreenColor: #d9f2ee;
+    --darkGreyColor: #a7a7a7;
+    --greyColor: #f5f5f5;
+    --cyanColor: #00ffff;
+    --tealColor: #008080;	
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Open Sans', sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--greyColor); /* Add a background color for better visibility */
+}
+
+.rounded-image {
+    width: 200px;
+    height: 150px;
+    border-radius: 10px; /* Adjust the radius as needed */
+    overflow: hidden; /* Ensure rounded corners are applied */
+}
+.sidebar {
+    height: 100%;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 2%;
+    background-color: var(--primaryColor);
+    color: var(--whiteColor);
+}
+.sidebar-menus{
+    display: flex;
+    flex-direction: column;
+}
+.sidebar-menus a , .sidebar-logout a {
+    padding: 5% 8%;
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    text-decoration: none;
+    color: var(--whiteColor);
+}
+.sidebar-menus a ion-icon , .sidebar-logout a ion-icon {
+    font-size: 20px;
+}
+.sidebar-menus a:hover , .sidebar-logout a:hover {
+    background-color: var(--secondaryColor);
+    color: var(--blackColor);
+    border-radius: 50px;
+}
+/* main */
+.main #home {
+    width: calc(100% - 250px); /* Adjusted width considering the sidebar width */
+    margin-left: 250px; /* Adjusted margin to match the sidebar width */
+    text-align: center;
+}
+.main #cart {
+    width: calc(100% - 250px); /* Adjusted width considering the sidebar width */
+    margin-left: 250px; /* Adjusted margin to match the sidebar width */
+    text-align: center;
+    padding-top: 20px; /* Added padding to give space at the top */
+}
+/* Animation keyframes for fade-in and slide-up */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.container {
+    max-width: 800px;
+    padding: 20px; /* Add padding for better spacing */
+    background-color: var(--whiteColor); /* White background */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+}
+
+/* Shopping Cart Styles */
+#cart {
+    background: #f5f5f5; /* Muted background color */
+    color: #333; /* Dark text color for good contrast */
+    padding: 20px;
+    margin-top: 20px; /* Auto for horizontal centering */
+    margin-left: 250px;
+    margin-right: 250px;
+    border-radius: 8px; /* Smaller rounded corners */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); /* Subtle box shadow for depth */
+    text-align: center;
+    z-index: 999;
+    position: relative;
+}
+
+#cart:hover {
+    background-color: #fff; /* Change background color on hover */
+    color: var(--primaryColor); /* Change text color on hover */
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2); /* Adjust box shadow on hover */
+}
+
+#cart h2 {
+    font-size: 24px;
+    font-weight: bold; /* Added font weight for emphasis */
+    margin-bottom: 15px;
+}
+
+#cart-items {
+    list-style-type: none;
+    padding: 0;
+}
+
+#cart-items li {
+    margin-bottom: 15px;
+    padding: 15px;
+    background: #e0e0e0; /* Muted background for each item */
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#cart-items li img {
+    max-width: 50px;
+    margin-right: 10px;
+}
+
+#cart-items li p {
+    flex-grow: 1;
+    margin: 0;
+    font-size: 16px; /* Adjusted font size for better readability */
+}
+
+#cart-items li button {
+    background: #3498db; /* Professional blue button color */
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#cart-items li button:hover {
+    background: #2980b9; /* Darker blue on hover */
+}
+
+/* Checkout Button Styles */
+button {
+    background-color: var(--primaryColor);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: var(--secondaryColor);
+    color: black;
+}
+
+/* Add this style to your CSS */
+.decrease-animation {
+    animation: decreaseAnimation 0.5s ease; /* Adjust the animation duration and easing as needed */
+  }
+  
+  @keyframes decreaseAnimation {
+    from {
+      transform: scale(1);
+    }
+  
+    to {
+      transform: scale(0);
+      opacity: 0;
+    }
+  }
+  
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    /* Mobile responsiveness styles */
+    .sidebar {
+        display: none;
+    }
+    .hamburger-menu {
+        display: block;
+    }
+    nav {
+        padding: 15px;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    nav a {
+        margin-right: 0;
+    }
+    .menu-item {
+        width: 100%;
+    }
+    section#cart {
+        padding: 20px 10px;
+    }
+    #home {
+        padding: 30px 10px;
+    }
+    #cart {
+        padding: 15px;
+    }
+    header h1 {
+        font-size: 24px;
+    }
+}

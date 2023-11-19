@@ -1,0 +1,131 @@
+:root {
+    --primaryColor: #000000;
+    --secondaryColor: #fffb00;
+    --whiteColor: #fff;
+    --blackColor: #222;
+    --softGreenColor: #d9f2ee;
+    --darkGreyColor: #a7a7a7;
+    --greyColor: #f5f5f5;
+    --cyanColor: #00ffff;
+    --tealColor: #008080;	
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Open Sans', sans-serif;
+}
+body {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+.rounded-image {
+    width: 200px;
+    height: 150px;
+    border-radius: 10px; /* Adjust the radius as needed */
+    overflow: hidden; /* Ensure rounded corners are applied */
+}
+.sidebar {
+    height: 100%;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 2%;
+    background-color: var(--primaryColor);
+    color: var(--whiteColor);
+}
+.sidebar-menus{
+    display: flex;
+    flex-direction: column;
+}
+.sidebar-menus a , .sidebar-logout a {
+    padding: 5% 8%;
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    text-decoration: none;
+    color: var(--whiteColor);
+}
+.sidebar-menus a ion-icon , .sidebar-logout a ion-icon {
+    font-size: 20px;
+}
+.sidebar-menus a:hover , .sidebar-logout a:hover {
+    background-color: var(--secondaryColor);
+    color: var(--blackColor);
+    border-radius: 50px;
+}
+
+/* Container styles */
+.container {
+    max-width: 800px;
+    padding: 20px; /* Add padding for better spacing */
+    margin-top: 100px;
+    margin-left: 465px; /* Center the container */
+    margin-right: 300px;
+    background-color: var(--whiteColor); /* White background */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+}
+
+.container:hover {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2); /* Adjusted box shadow on hover */
+}
+
+/* Contact form styles */
+#contact {
+    /*background-color: #f4f4f4;*/
+    padding: 40px 0;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact h1 {
+    font-size: 24px;
+    font-weight: bold; /* Added font weight for emphasis */
+    margin-bottom: 15px;
+}
+input,
+textarea {
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 12px; /* Increased padding for better appearance */
+    box-sizing: border-box;
+    border: 1px solid #ccc; /* Add a subtle border */
+    border-radius: 5px; /* Rounded corners */
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+input:focus,
+textarea:focus {
+    border-color: #007bff; /* Change border color on focus */
+}
+
+button {
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    background-color: #007bff; /* Button background color */
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions for background color and text color */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker background color on hover */
+    color: #fff; /* Change text color on hover */
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Assest/CSS/home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/logo.png" />
+    <title>Foodo Foods | Home</title>
+</head>
+<body>
+    <!-- sidebar -->
+    <div class="sidebar">
+        <!-- logo -->
+        <h1 class="logo">FOODO FOODS</h1>
+        <!-- list of menu -->
+        <div class="sidebar-menus">
+            <a href="home.html"><ion-icon name="storefront-outline"></ion-icon>Home</a>
+            <a href="menu.html #menu"><ion-icon name="menu-outline"></ion-icon>Menu</a>
+            <a href="cart.html #cart"><ion-icon name="cart-outline"></ion-icon>Cart</a>
+            <a href="contact.html #contact"><ion-icon name="chatbubbles-outline"></ion-icon>Contact Us</a>
+        </div>
+        <!-- logout -->
+        <div class="sidebar-logout">
+            <a href="#logout" id="logoutBtn"><ion-icon name="log-out-outline"></ion-icon>Logout</a>
+        </div>
+    </div>
+    <!-- main -->
+    <div class="main">
+        <!-- Home Section -->
+        <section id="home">
+            <div class="container">
+                <h1>Welcome Foodie</h1>
+                <p>Discover a world of culinary delights at your fingertips.</p>
+                <p>From savory classics to exotic flavors, we bring you a seamless and delightful food ordering experience.</p>
+
+                <!-- Call-to-Action -->
+                <div class="cta">
+                    <p>Explore Our Menu</p>
+                    <a href="menu.html" class="btn">Menu</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+<!-- JavaScript for logout-->
+    <script>
+        document.getElementById('logoutBtn').addEventListener('click', function() {
+            window.location.href = 'login.html';
+        });
+    </script>
+<!-- javascript  -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="Assest/JS/home.js"></script>
+</body>
+</html>
