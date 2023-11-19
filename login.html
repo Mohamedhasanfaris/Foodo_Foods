@@ -30,18 +30,13 @@
                 alert("Please fill in both username and password");
                 return false;
             }
-
-            // Check your predefined username and password
             if ((username === "admin" && password === "adminff") || (username === "user" && password === "userff")) {
                 alert("Login successful");
-
-                // Dynamically set the form action based on the user role
                 if (username === "admin") {
                     document.form.action = "admin.html";
                 } else {
                     document.form.action = "home.html";
                 }
-
                 return true;
             } else {
                 alert("Incorrect username or password");
